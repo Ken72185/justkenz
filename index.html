@@ -315,6 +315,27 @@
             justify-content: center;
             gap: 2rem;
             margin-top: 2rem;
+            overflow-x: auto;
+            padding: 0 1rem;
+            scroll-snap-type: x mandatory;
+        }
+
+        .contact-links::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .contact-links::-webkit-scrollbar-track {
+            background: #333;
+            border-radius: 3px;
+        }
+
+        .contact-links::-webkit-scrollbar-thumb {
+            background: #ff6b6b;
+            border-radius: 3px;
+        }
+
+        .contact-links::-webkit-scrollbar-thumb:hover {
+            background: #ff5252;
         }
 
         .contact-link {
@@ -325,6 +346,9 @@
             text-decoration: none;
             transition: background 0.3s ease;
             border: 1px solid #333;
+            white-space: nowrap;
+            flex-shrink: 0;
+            scroll-snap-align: center;
         }
 
         .contact-link:hover {
@@ -358,6 +382,17 @@
             h2 {
                 font-size: 2rem;
             }
+
+            .contact-links {
+                justify-content: flex-start;
+                padding: 1rem;
+            }
+
+            .contact p {
+                margin-bottom: 1rem;
+                font-size: 0.9rem;
+                color: #999;
+            }
         }
     </style>
 </head>
@@ -387,7 +422,7 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <h1>KEN ANGGA PRADITYA</h1>
+                <h1>KEN ANGGA PRADITYAr</h1>
                 <p>Full Stack Developerr</p>
                 <a href="#projects" class="cta-button">View My Work</a>
             </div>
@@ -435,7 +470,7 @@
                 <div class="project-card">
                     <h3>Portfolio Website</h3>
                     <p>Interactive portfolio website with smooth animations and modern design. Features an engaging intro with multilingual greetings and elegant dark theme.</p>
-                    <a href="justkenz.vercel.app" class="project-link">Current Site →</a>
+                    <a href="#home" class="project-link">Current Site →</a>
                 </div>
             </div>
         </section>
